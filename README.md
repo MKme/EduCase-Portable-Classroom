@@ -18,5 +18,5 @@ https://hackaday.io/project/11010-educase-portable-classroom
 
 
 <p align="center">
-  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/school.jpg" width="350"/>
+  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/2016-04-13%2015.51.27.jpg" width="500"/>
 </p>
