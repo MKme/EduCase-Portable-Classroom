@@ -5,6 +5,7 @@ Add relays as you wish to control the power on board or additional systems
 My Youtube Channel  : http://www.youtube.com/mkmeorg
 If you use this code or personalize it etc- please consider sharing it back with the world via the forum at http://www.mkme.org/forum
 
+Notes:
  RTC support
  RTC Connected to VCC and Ground
  I2C Connections:
@@ -240,9 +241,9 @@ void Alarm(){
 //  if (t >= setTemp + AlarmTemp  || t <= setTemp - AlarmTemp && second != alarmseconds  ) {ActiveAlarm = 1;} //Checks over or under alarm limit and setas alarm #1
  // else   ActiveAlarm = 0; //No active alarm criteria met
   
-  //Insert Soil Alarm here
+  //Insert Alarm here
   
-  //Insert Moisture Alarm here
+  //Insert Alarm here
   
   //Insert non desired output alarms here
   
