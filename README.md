@@ -2,6 +2,10 @@ The EduCase is a fully functional classroom inside a portable case.
 It contains fully functional computers (Raspberry Pi) loaded with content, tuorials, tools 
 and information which educators can use in any area of the world. 
 
+<p align="center">
+  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/school.jpg" width="350"/>
+</p>
+
 The project is fully self contained and self-powered and also includes provisions for communication 
 with the outside world using either cellular data or a dedicated portable satellite dish and receiver 
 linked to the Outernet. 
