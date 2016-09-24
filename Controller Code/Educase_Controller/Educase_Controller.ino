@@ -7,6 +7,7 @@ If you use this code or personalize it etc- please consider sharing it back with
 
 Notes:
  RTC support
+ http://www.hobbyist.co.nz/?q=real_time_clock
  RTC Connected to VCC and Ground
  I2C Connections:
  RTC SDA connected to pin Analog 4
@@ -40,7 +41,7 @@ Adafruit_PCD8544 display = Adafruit_PCD8544(7, 6, 5, 4, 3);//4 and 3 are reverse
 #define backlightpin 11 //Pin for LCD backlight
 int backlightlevel = 220; //Level for backlight PWM
 int backlightoff = 255; //Level which turns backlight off completely
-int displaycontrast = 50; //***** Set this contrast to suit your display- they are indeed different
+int displaycontrast = 60; //***** Set this contrast to suit your display- they are indeed different
 
 //Ouput relay
 #define LIGHTPIN 10 //Pin for output relay
@@ -101,11 +102,11 @@ void setup(){  //Do setup type stuff to make cooler stuff work later------------
   display.setTextSize(1);
   display.setTextColor(BLACK);
   display.setCursor(0,0);
-  display.println("   Eric's");
+  display.println("    Eric's");
   display.println("");
-  display.println("  Educase");
-  display.println(" Portable");
-  display.println("Classroom");
+  display.println("   Educase");
+  display.println("  Portable");
+  display.println(" Classroom");
   display.display();
   delay(2000);
   display.clearDisplay();     // clears the screen and buffer
@@ -225,14 +226,10 @@ void LCDDisplay(){
   display.print("*C  ");
   display.print(h);
   display.println("% RH");
-  display.print("Voltage: ");
+  display.print("Batt V: ");
   display.println(Voltage);
-  display.print("V2: ");
+  display.print("Aux V: ");
   display.println(Voltage2);
-  display.print("V3: ");
-  display.print(Voltage3);
-  display.print(" ");
-  display.print(Voltage4);
   display.display();
   }
    
