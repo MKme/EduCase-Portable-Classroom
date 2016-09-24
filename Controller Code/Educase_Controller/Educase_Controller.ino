@@ -48,33 +48,36 @@ int displaycontrast = 60; //***** Set this contrast to suit your display- they a
 
 //Ouput relay
 #define TempPin 12 // Relay pin for Ouput relay
+
+//Battery Montiroing
+#define batteryPin 3 //pin for voltage measurement
+
 //Globalize variables
 int second, minute, hour, weekDay, monthDay, month, year;
 int h;//humidity used to be float for decimal places
 int t;//temperature used to be float for decimal places
-
-//Alarms
-int alarmseconds; // Used for overtemp alarm seconds since active for display flashing
-int AlarmTemp = 4; // Alarm temp OVER or UNDER setTemp value
-int ActiveAlarm; // Used for overtemp alarms to notify etc
-
 int Voltage;
 int Voltage2;
 int Voltage3;
 int Voltage4;
-#define batteryPin 3 //pin for voltage measurement
+int volts;
 const float referenceVolts = 12.6;  
+
 //voltage divider with 2 10Kohm resistors to monitor the 12.6V supply from battery
 //http://forum.arduino.cc/index.php/topic,13728.0.html
 //currently rersistors not included on PCB so wire externally
 
-
+//Alarms
+int alarmseconds; // Used for overtemp alarm seconds since active for display flashing
+int AlarmTemp = 40; // Temperature in Degrees Celsius for Alarm on Battery Temp dangerously high
+int ActiveAlarm; // Used for overtemp alarms to notify etc
+int AlarmVolt = 11.6; // Battery Low Voltage Critical
 
 /*
 Alarm Codes:
 0 = No active alarm
-1 = Internal Temp <> AlarmTemp from setTemp value (over or under temp condition)
-2 = TBD (Previously na)
+1 = Battery Temperature Dangerously High
+2 = Battery Voltage Too Low
 3 = TBD (Previously na)
 4 = TBD (Previously na)
 5 = TBD (Previously na)
@@ -234,11 +237,13 @@ void LCDDisplay(){
   }
    
 void Alarm(){
-  //Overtemp OR Undertemp alarm--------------------------------------
-//  if (t >= setTemp + AlarmTemp  || t <= setTemp - AlarmTemp && second != alarmseconds  ) {ActiveAlarm = 1;} //Checks over or under alarm limit and setas alarm #1
- // else   ActiveAlarm = 0; //No active alarm criteria met
+  //Overtemp  alarm--------------------------------------
+  if (t >= AlarmTemp && second != alarmseconds  ) {ActiveAlarm = 1;} //Checks over or under alarm limit and setas alarm #1
+  else   ActiveAlarm = 0; //No active alarm criteria met
   
-  //Insert Alarm here
+  //Low Voltage Alarm
+  if (volts <= AlarmVolt && second != alarmseconds  ) {ActiveAlarm = 2;} //Checks over or under alarm limit and sets alarm #2
+  else   ActiveAlarm = 0; //No active alarm criteria met
   
   //Insert Alarm here
   
