@@ -1,14 +1,15 @@
 /* 
 Erics Open Source Educase Portable classroom
-This code is for the Arduino monitoring and control board
-Add relays as you wish to control the power on board or additional systems
+This code is for the Arduino monitoring and control board to prevent damage to onboard systems
+Alarms displayed via LCD and power control via relay RL1
 My Youtube Channel  : http://www.youtube.com/mkmeorg
-If you use this code or personalize it etc- please consider sharing it back with the world via the forum at http://www.mkme.org/forum
+If you use this code or personalize it etc- please consider sharing it back with the world Open-Source 
 
-Notes:
- RTC support
+This sketch is currently using Arduino Nano V3.0
+
+Real Time Clock (RTC) support:
  http://www.hobbyist.co.nz/?q=real_time_clock
- RTC Connected to VCC and Ground
+ RTC Connected to VCC and Ground Only- Additional Vbatt and Temp to be added later
  I2C Connections:
  RTC SDA connected to pin Analog 4
  RTC SCL connected to pin Analog 5
@@ -17,13 +18,14 @@ Used I2CScanner.ino to find I2C addresses- 0x50 (EEPROM?)  and 0x68 found
 Used SetRTC.ino to manually set proper date/date on RTC module- This wil set the date/time as soon as serial 
 is initiated so set ahead by a minute and wait till time matches then open serial window to set.
 Downloaded from http://projectsfromtech.blogspot.com/
-dht11:
+
+DHT11 Temp Sensor:
 Connect pin 1 (on the left) of the sensor to +5V
 Connect pin 2 of the sensor to whatever your DHTPIN is
 Connect pin 4 (on the right) of the sensor to GROUND
 Connect a 10K resistor from pin 2 (data) to pin 1 (power) of the sensor
 
-Pin 11 for contrast on the Nokia 5110
+Pin 11 for contrast on the Nokia 5110 (see below)
 */
 
 #include "Wire.h" //RTC
@@ -105,10 +107,10 @@ void setup(){  //Do setup type stuff to make cooler stuff work later------------
   display.setTextSize(1);
   display.setTextColor(BLACK);
   display.setCursor(0,0);
-  display.println("    Eric's");
+  display.println("  Eric's");
   display.println("");
-  display.println("   Educase");
-  display.println("  Portable");
+  display.println(" Educase");
+  display.println(" Portable");
   display.println(" Classroom");
   display.display();
   delay(2000);
