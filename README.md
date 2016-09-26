@@ -12,8 +12,13 @@ linked to the Outernet.
 The case houses it's own LCD display but also utilizes an LED projector enabling the entire 
 classroom to take part in any content.
 
-Project documented on Hackaday Here:
+Internal monitoring and control now provided via an Arduino Running the Aurora V1.2 Firmware. This code is 
+Fully open-source and free for all to use and modify.
+<p align="center">
+  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/auroras-1203288_640.jpg" width="500"/>
+</p>
 
+Project documented on Hackaday Here:
 https://hackaday.io/project/11010-educase-portable-classroom
 
 
