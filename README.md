@@ -3,7 +3,7 @@ It contains fully functional computers (Raspberry Pi) loaded with content, tuori
 and information which educators can use in any area of the world. 
 
 <p align="center">
-  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/Nepal_20090515_1508.jpg"/>
+  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/Nepal_20090515_1508.jpg" width="650"/>
 </p>
 The project is fully self contained and self-powered and also includes provisions for communication 
 with the outside world using either cellular data or a dedicated portable satellite dish and receiver 
