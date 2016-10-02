@@ -27,6 +27,7 @@ Connect pin 4 (on the right) of the sensor to GROUND
 Connect a 10K resistor from pin 2 (data) to pin 1 (power) of the sensor
 
 Pin 11 for contrast on the Nokia 5110 (see below)
+
 */
 
 #include "Wire.h" //RTC
