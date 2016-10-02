@@ -13,7 +13,7 @@ The case houses it's own LCD display but also utilizes an LED projector enabling
 classroom to take part in any content.
 
 <p align="center">
-  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/2016-10-02%2016.40.09.jpg"/>
+  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/2016-10-02%2016.40.09.jpg" width="800"/>
 </p>
 
 Internal monitoring and control now provided via an Arduino Running the Aurora V1.2 Firmware. This code is 
