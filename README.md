@@ -33,3 +33,9 @@ https://hackaday.io/project/11010-educase-portable-classroom
 <p align="center">
   <img src="https://cdn.hackaday.io/images/5894441475726078112.jpg" width="700"/>
 </p>
+
+See more of our open source projects at http://www.mkme.org  We try to share as many projects as possible which might someday
+make the world a better place.
+
+Cheers
+Eric
