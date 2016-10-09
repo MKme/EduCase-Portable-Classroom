@@ -3,6 +3,10 @@ It contains fully functional computers (Raspberry Pi) loaded with content, tuori
 and information which educators can use in any area of the world. 
 
 <p align="center">
+  <img src="https://cdn.hackaday.io/images/4379221475727265148.jpg" width="700"/>
+</p>
+
+<p align="center">
   <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/Nepal_20090515_1508.jpg" width="650"/>
 </p>
 The project is fully self contained and self-powered and also includes provisions for communication 
@@ -27,5 +31,5 @@ https://hackaday.io/project/11010-educase-portable-classroom
 
 
 <p align="center">
-  <img src="https://github.com/MKme/EduCase-Portable-Classroom/blob/master/Images/2016-04-13%2015.51.27.jpg" width="700"/>
+  <img src="https://cdn.hackaday.io/images/5894441475726078112.jpg" width="700"/>
 </p>
