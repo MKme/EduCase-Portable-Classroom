@@ -8,6 +8,10 @@ My Youtube Channel  : http://www.youtube.com/mkmeorg
 If you use this code or personalize it etc- please consider sharing it back with the world Open-Source 
 This sketch is currently using Arduino Nano V3.0
 
+This code uses the fantastic Nokia 5110 library provided FREE by Adafruit NIndustries
+If you use this for your project consider buying some of your parts from them at http://adafruit.com
+Show them some love for supporting the maker movement with tonnes of free tutorials and code.
+
 Real Time Clock (RTC) support:
  http://www.hobbyist.co.nz/?q=real_time_clock
  RTC Connected to VCC and Ground Only- Additional Vbatt and Temp to be added later
@@ -36,7 +40,7 @@ byte zero = 0x00; //workaround for issue #527 on RTC
 #include "DHT.h"  //You need this library
 #define DHTPIN 2     // DHT11 Humidity Pin
 #define DHTTYPE DHT11   // DHT 11 
-DHT dht(DHTPIN, DHTTYPE);//unknown needed by DHT11
+DHT dht(DHTPIN, DHTTYPE);//needed by DHT11
 #include "Adafruit_GFX.h"  //Awesome Adafruit libraries- download from their site
 #include "Adafruit_PCD8544.h"  //Awesome Adafruit libraries- download from their site
 Adafruit_PCD8544 display = Adafruit_PCD8544(7, 6, 5, 4, 3);//4 and 3 are reversed on the cheap eBay models
@@ -45,15 +49,15 @@ Adafruit_PCD8544 display = Adafruit_PCD8544(7, 6, 5, 4, 3);//4 and 3 are reverse
 #define backlightpin 11 //Pin for LCD backlight
 int backlightlevel = 220; //Level for backlight PWM
 int backlightoff = 255; //Level which turns backlight off completely
-int displaycontrast = 60; //***** Set this contrast to suit your display- they are indeed different
+int displaycontrast = 60; //***** Set this contrast to suit your display- they are indeed different between production runs
 
 //Ouput relay
 #define LIGHTPIN 10 //Pin for output relay
 
-//Ouput relay
-#define TempPin 12 // Relay pin for Ouput relay
+//Temp Pin if used
+#define TempPin 12 // Relay pin for Temp
 
-//Battery Montiroing
+//Battery Montitoring
 #define batteryPin 3 //pin for voltage measurement
 
 //Globalize variables
@@ -69,7 +73,7 @@ const float referenceVolts = 12.6;
 
 //voltage divider with 2 10Kohm resistors to monitor the 12.6V supply from battery
 //http://forum.arduino.cc/index.php/topic,13728.0.html
-//currently rersistors not included on PCB so wire externally
+//currently rersistors not included on pre-made PCB so wire externally
 
 //Alarms
 int alarmseconds; // Used for overtemp alarm seconds since active for display flashing
@@ -86,7 +90,7 @@ Alarm Codes:
 4 = TBD (Previously na)
 5 = TBD (Previously na)
 6 = TBD (Previously na)
-7 = TBD (na)
+7 = TBD (Previously Fatal Error)
 8 = TBD (Previously Watchdog/Reboot Triggered)
 */
 
@@ -171,6 +175,7 @@ void TempFunctions(){
 
 void VoltageFunctions(){
 int val = analogRead(batteryPin);  // read the value from the A0 battery monitoring pin with voltage divider
+//if you run in to any odd measurements here- take a second read and throw out the first- this will get rid of the known analog read bug with some chips
 float volts = (val / 511.0) * referenceVolts ; // divide val by (1023/2)because the resistors divide the voltage in half
   
 }
@@ -253,7 +258,7 @@ void Alarm(){
   
   //Insert non desired output alarms here
   
-  //Insert SkyNet has teaken over the world via my garden alarm here
+  //Insert SkyNet has teaken over the world via my Educase alarm here
 
 }
 
