@@ -8,7 +8,9 @@ My Youtube Channel  : http://www.youtube.com/mkmeorg
 If you use this code or personalize it etc- please consider sharing it back with the world Open-Source 
 This sketch is currently using Arduino Nano V3.0
 
-This code uses the fantastic Nokia 5110 library provided FREE by Adafruit NIndustries
+Get all schematics and instructions for the EduCase project on GitUHub at https://github.com/MKme/EduCase-Portable-Classroom
+
+This code uses the fantastic Nokia 5110 library provided FREE by Adafruit Industries
 If you use this for your project consider buying some of your parts from them at http://adafruit.com
 Show them some love for supporting the maker movement with tonnes of free tutorials and code.
 
